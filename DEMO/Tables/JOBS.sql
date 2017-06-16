@@ -3,6 +3,7 @@ CREATE TABLE demo.jobs (
   job_title VARCHAR2(35 BYTE) NOT NULL CONSTRAINT job_title_nn CHECK ("JOB_TITLE" IS NOT NULL),
   min_salary NUMBER(6),
   max_salary NUMBER(6),
+  bonus NUMBER(6),
   CONSTRAINT job_id_pk PRIMARY KEY (job_id)
 );
 COMMENT ON TABLE demo.jobs IS 'jobs table with job titles and salary ranges. Contains 19 rows.
